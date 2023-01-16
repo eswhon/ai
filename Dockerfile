@@ -8,5 +8,4 @@ COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 COPY . .
 ENV HEADLESS_BROWSER=True
-# RUN mv .env.example .env
 RUN python3 server.py
