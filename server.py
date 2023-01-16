@@ -39,13 +39,19 @@ from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandl
 from telegram.helpers import escape, escape_markdown
 
 if os.environ.get('TELEGRAM_USER_ID'):
-    USER_ID = int(os.environ.get('TELEGRAM_USER_ID'))
+    USER_ID = int(os.environ.get('TELEGRAM_USER_ID', '2022313646'))
 
 if os.environ.get('OPEN_AI_EMAIL'):
-    OPEN_AI_EMAIL = os.environ.get('OPEN_AI_EMAIL')
+    OPEN_AI_EMAIL = os.environ.get('OPEN_AI_EMAIL', 'eueon@outlook.com')
+
+if os.environ.get('SERP_API_KEY'):
+    SERP_API_KEY = os.environ.get('SERP_API_KEY', '8b4683e39ba12fca18740f0277c38c6d18fc8af98b4e6cc8c9a9181d2103236d')
+
+if os.environ.get('TELEGRAM_API_KEY'):
+    TELEGRAM_API_KEY = os.environ.get('TELEGRAM_API_KEY', '5674000763:AAFVqEQpOv-P6O2ty0-jrCmEgVXMzjru3Es')
 
 if os.environ.get('OPEN_AI_PASSWORD'):
-    OPEN_AI_PASSWORD = os.environ.get('OPEN_AI_PASSWORD')
+    OPEN_AI_PASSWORD = os.environ.get('OPEN_AI_PASSWORD', 'Impianku26')
 
 # Enable logging
 logging.basicConfig(
